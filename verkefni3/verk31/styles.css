@@ -2,7 +2,6 @@
     box-sizing: border-box
 }
 body {
-    border: 1px solid blue;
     margin: 0em auto;
     padding: 0em;
     max-width: 60em; /* = 960px x 1080px fartölvuskjár */
