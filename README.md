@@ -7,4 +7,4 @@
 
 [Verkefni 2.4](https://d4nni.github.io/verkefni2/verkefni-24/)
 
-[Verkefni 3.1](https://d4nni.github.io/verkefni3/verk31/)
+[Verkefni 3](https://d4nni.github.io/verkefni3/verk31/)
