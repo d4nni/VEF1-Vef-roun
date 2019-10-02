@@ -6,3 +6,5 @@
 [Verkefni 2.3](https://d4nni.github.io/verkefni2/verkefni-23/)
 
 [Verkefni 2.4](https://d4nni.github.io/verkefni2/verkefni-24/)
+
+[Verkefni 3](https://d4nni.github.io/verkefni3/)
