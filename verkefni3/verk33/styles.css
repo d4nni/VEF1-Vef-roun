@@ -1,0 +1,126 @@
+* {
+    box-sizing: border-box
+}
+body {
+    border: 3px solid white;
+    margin: 0em auto;
+    padding: 0em;
+    max-width: 60em; /* = 960px x 1080px fartölvuskjár */
+    background-color: blue;
+}
+/*--  Grid Area --*/
+.container {
+    grid-area: container;
+}
+.haus {
+    grid-area: haus;
+    align-content: center;
+    padding: 2em;
+    font-size:2em;
+    padding-left: 6em;
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    background-color: blue;
+}
+.topnav {
+    grid-area: topnav;
+    background-color: crimson;
+}
+.content {
+    grid-area: content;
+    font-family: 'Monda', sans-serif;
+    background-color: crimson;
+}
+.foot {
+    grid-area: foot;
+    }
+/*-- dálkar í main --*/
+.as1 {
+    grid-area: as1;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.as2 {
+    grid-area: as2;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: blue;
+}
+.art1 {
+    grid-area: art1;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+/*-- Grid Template Area --*/
+.container {
+    display: grid;
+    grid-template-areas: 
+    "topnav haus"
+    "topnav haus"
+    "content content"
+    "foot foot";
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
+}
+.content {
+    display: grid; /* grid virkar á barn (child) en ekki barnabarn (grandchild) */
+    grid-gap: 0em;
+    padding: 0em ;
+    grid-template-areas: 
+    "art1 art1 as2"
+    "as1 as1 as2";
+    grid-template-columns: 3fr 3fr 3fr;
+}
+/*-- Top menu */
+.topmenu {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
+    margin: 0em;
+    padding-left: 0em 0;
+    padding: 0em;
+    font-size: 3em;
+    align-items: center;
+    font-family: 'Monda', sans-serif;
+    padding-top: 1em;
+    background-color: crimson;
+    padding-bottom: 1em;
+}
+.topmenu li {
+    list-style-type: none;
+}
+.footmenu {
+    display: flex;
+    flex-flow: row-reverse;
+    justify-content: space-around;
+    margin: 0;
+    padding-left: 0em;
+    padding: 0em
+}
+.footmenu li {
+    list-style-type: none;
+}
+.haus, .topnav, .content, .art1, .as1, .art2, .as2, .foot {
+    border: 5px solid white;
+}
+h1 {
+    font-style: italic;
+    font-size: 3em;
+}
+a {
+    color: white;
+    text-decoration-line: none;
+}
+a:hover{
+    border-top-color: blue;
+    color: blue;
+}
+p {
+    color: white;
+}
+h3, h2 {
+    color: blue;
+}
+.virkur {
+    color: blue;
+}
