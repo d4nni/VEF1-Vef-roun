@@ -4,7 +4,7 @@ body {
     margin: 0; /* tek út sjálgefið 10px margin */
     /* font-family: ;*/
     font: 400 1em/1.5 'Lato',sans-serif; /* samsett skipun: weight/height, size, family */
-    background-color: blue;
+    background-color: green;
 }
 h1 {
     font-weight: 300;
@@ -105,11 +105,11 @@ blockquote {
     background-color: rgb(240, 202, 152);
 }
 .copy {
-    color: gray;
+    color: lightseagreen;
     text-align: center;
 }
 .bground2 {
-    background: linear-gradient(to bottom, lightblue,lightblue) ;
+    background: linear-gradient(to bottom, lightgreen,lightgreen) ;
     padding: 1em;
 }
 .bgroundFoot {
@@ -117,7 +117,7 @@ blockquote {
     padding: 1em;
 }
 .bgroundFoot2 {
-    background: linear-gradient(to bottom, lightblue,blue) ;
+    background: linear-gradient(to bottom, lightgreen,green) ;
     padding: 1em;
 }
 h4 {
