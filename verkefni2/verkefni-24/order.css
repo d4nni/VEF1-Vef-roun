@@ -1,6 +1,11 @@
  * {
     box-sizing: border-box;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	max-width: 60em;
 	 margin: 0 auto;

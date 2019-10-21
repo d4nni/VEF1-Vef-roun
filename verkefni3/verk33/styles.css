@@ -1,6 +1,11 @@
 * {
     box-sizing: border-box
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     border: 3px solid white;
     margin: 0em auto;
