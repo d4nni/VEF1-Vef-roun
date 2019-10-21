@@ -4,7 +4,7 @@ body {
     margin: 0; /* tek út sjálgefið 10px margin */
     /* font-family: ;*/
     font: 400 1em/1.5 'Lato',sans-serif; /* samsett skipun: weight/height, size, family */
-    background-color: blue;
+    background-color: green;
 }
 h1 {
     font-weight: 300;
@@ -45,7 +45,7 @@ blockquote {
 }
 .footnav a {
     color: black;
-    text-decoration: none;
+    text-decoration: underline;
 }
 .footnav {    
     padding: 0; 
@@ -53,7 +53,8 @@ blockquote {
 }
 .footnav li {
     list-style-type: none;
-    line-height: 2;
+    line-height: 2.5em;
+    font-family: 'Open Sans', sans-serif;
 }
 .topnav a {
     padding-left: 2em;
@@ -105,11 +106,11 @@ blockquote {
     background-color: rgb(240, 202, 152);
 }
 .copy {
-    color: gray;
+    color: lightseagreen;
     text-align: center;
 }
 .bground2 {
-    background: linear-gradient(to bottom, lightblue,lightblue) ;
+    background: linear-gradient(to bottom, lightgreen,lightgreen) ;
     padding: 1em;
 }
 .bgroundFoot {
@@ -117,7 +118,7 @@ blockquote {
     padding: 1em;
 }
 .bgroundFoot2 {
-    background: linear-gradient(to bottom, lightblue,blue) ;
+    background: linear-gradient(to bottom, lightgreen,green) ;
     padding: 1em;
 }
 h4 {
@@ -125,7 +126,25 @@ h4 {
 }
 dl {
     color: black;
+    font-family: 'Open Sans', sans-serif;
 }
 .vheight {
     height: 100vh;    
+}
+a:hover {
+    background-color: lightgreen;
+    background-size: 2em;
+    padding: .5em;
+    border: black solid;
+}
+header, main, aside, footer {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "aside"
+    "footer"
+}
+header {
+    font-family: 'Open Sans', sans-serif;
 }
