@@ -110,7 +110,7 @@ blockquote {
     background-color: rgb(240, 202, 152);
 }
 .copy {
-    color: lightseagreen;
+    color: darkgreen;
     text-align: center;
 }
 .bground2 {
@@ -151,4 +151,33 @@ header, main, aside, footer {
 }
 header {
     font-family: 'Open Sans', sans-serif;
+}
+img {
+    max-width: 100%;
+    height: 100%;
+}
+.img {
+    size: 2em;
+    height: 100;
+}
+.iframe {
+    padding-top: 5em;
+}
+.audio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center 
+}
+.svg {
+    height: 100%;
+    width: 7em;
+}
+.svg-flex {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.img2 {
+    height: 100%;
+    width: 50%;
 }
