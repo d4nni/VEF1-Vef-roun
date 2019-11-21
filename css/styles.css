@@ -40,9 +40,6 @@ blockquote {
     display: grid;
     grid-template-columns: repeat(4,1fr);
 }
-.gap-4 {
-    grid-gap: 4em
-}
 .bground {
     background: linear-gradient(to bottom, rgb(240, 202, 152),lightblue,lightgreen) ;
     padding: 1em;
@@ -141,31 +138,12 @@ a:hover {
     padding: .5em;
     border: black solid;
 }
-header, main, aside, footer {
-    display: grid;
-    grid-template-areas:
-    "header"
-    "main"
-    "aside"
-    "footer"
-}
 header {
     font-family: 'Open Sans', sans-serif;
-}
-img {
-    max-width: 100%;
-}
-.img {
-    size: 2em;
-    height: 100;
-}
-.iframe {
-    padding-top: 5em;
 }
 .audio-container {
     display: flex;
     justify-content: center;
-    align-items: center 
 }
 .svg {
     height: 100%;
@@ -176,6 +154,178 @@ img {
     justify-content: flex-end;
     align-items: flex-end;
 }
-.img2 {
-    width: 100%;
+header {
+    grid-area: header;
+}
+main {
+    grid-area: main;
+}
+footer {
+    grid-area: footer;
+}
+.kort {
+    grid-area: kort;
+   
+}
+.logo {
+    grid-area: logo;
+}
+header {
+    display: grid;
+    grid-template-areas: 
+    "titill logo"
+    "kort kort";
+}
+.uppl {
+    grid-area: uppl;
+}
+.verkefni {
+    grid-area: verkefni;
+}
+.tenglar {
+    grid-area: tenglar;
+}
+img, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 0em) {
+    footer {
+        display: grid;
+        grid-template-areas: 
+        "verkefni"
+        "tenglar"
+        "uppl";
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+    }
+    .kort {
+        width: 80%;
+        padding-left: 2em;
+    }
+    header h1 {
+        padding-left: .5em;
+    }
+    header p {
+        padding-right: 2em;
+    }
+    .svg-flex {
+        padding-right: 2em;
+    }
+}
+
+@media screen and (min-width: 30em) {
+    footer {
+        display: grid;
+        grid-template-areas: 
+        "verkefni"
+        "tenglar"
+        "uppl";
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+    }
+    .video .gluggi {
+        width: 100%;
+        height: 15em;
+    }
+    header h1 {
+        padding-left: 1em;
+    }
+    header p {
+        padding-right: 1em;
+    }
+    .svg-flex {
+        padding-right: 1em;
+    }
+    .kort {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5em;
+    }
+}
+
+@media screen and (min-width: 37.5em) {
+    footer {
+        display: grid;
+        grid-template-areas: 
+        "tenglar verkefni"
+        "uppl uppl";
+        grid-template-columns: 1fr 1fr;
+        justify-content: space-around;
+    }
+    .video .gluggi {
+        width: 100%;
+        height: 20em;
+    }
+    header h1 {
+        padding-left: 2em;
+    }
+    header p {
+        padding-right: 2em;
+    }
+    .svg-flex {
+        padding-right: 2em;
+    }
+    .kort {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5em;
+    }
+}
+
+@media screen and (min-width: 48em) {
+    footer {
+        display: grid;
+        grid-template-areas: 
+        "uppl verkefni tenglar";
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-around;
+    }
+    .video .gluggi {
+        width: 100%;
+        height: 30em;
+    }
+    .kort {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5em;
+    }
+    header h1 {
+        padding-left: 2em;
+    }
+    header p {
+        padding-right: 2em;
+    }
+    .svg-flex {
+        padding-right: 2em;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    footer {
+        display: grid;
+        grid-template-areas: 
+        "uppl verkefni tenglar";
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-around;
+    }
+    .video .gluggi {
+        width: 91%;
+        height: 30em;
+    }
+    .kort {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 5em;
+    }
+    header h1 {
+        padding-left: 0em;
+    }
+    header p {
+        padding-right: 0em;
+    }
+    .svg-flex {
+        padding-right: 2em;
+    }
 }

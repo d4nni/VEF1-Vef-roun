@@ -16,7 +16,10 @@
             VEFHÖNNUN
         </h1>
       </div>
-      <div>
+      <section class="kort">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3850.9683356393234!2d-21.904298756822744!3d64.13826168915848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674cc84500001%3A0x16719bf129fa31a7!2zVMOma25pc2vDs2xpbm4!5e0!3m2!1sis!2sis!4v1572874305557!5m2!1sis!2sis"  frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </section>
+      <div class="logo">
         <p class="verkefni">Verkefni 6</p>
         <div class=svg-flex>
           <img class="svg" src="images/logoForWeb.svg">
@@ -31,34 +34,27 @@
       <main class="container gap-4">
         <section>
           <h1>Velkomin á vefsíðuna mína</h1>
-          <img class="img2" src="images/2019-Lamborghini-Aventador-SVJ-06.svg">
+          <img src="images/2019-Lamborghini-Aventador-SVJ-06.svg">
         </section>
-        <section>
-          <h1>Vídeó</h1>
-            <div class="col-2">
-              <img class="img" src="https://seeklogo.net/wp-content/uploads/2016/11/youtube-logo-preview-1-400x400.png" alt="">
-              <iframe class="iframe" width="100%" height="400" src="https://www.youtube.com/embed/Gzy_nCkn88U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </section>
-        <section>
-          <h1>Kort frá Google</h1>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3850.9683356393234!2d-21.904298756822744!3d64.13826168915848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48d674cc84500001%3A0x16719bf129fa31a7!2zVMOma25pc2vDs2xpbm4!5e0!3m2!1sis!2sis!4v1572874305557!5m2!1sis!2sis" width="100%" height="500" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-        </section>
-        <section>
+        <aside>
+          <section class="video">
+            <h1>Vídeó</h1>
+                <iframe class="gluggi" src="https://www.youtube.com/embed/Gzy_nCkn88U" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+          </section>
+          <section>
             <h1>Hljóðbrot</h1>
             <div class=audio-container>
               <audio controls>
                   <source src="audio/YG - I Was On The Block (Audio) ft. Valee, Boogie.mp3"  type="audio/mpeg">
               </audio>
             </div>
-        </section>
+          </section>
+        </aside>
       </main>
     </section>
-    <aside>
-    </aside>
 <div class="bgroundFoot2">
-    <footer class="container footcolor col-3">
-        <nav>
+    <footer class="container footcolor">
+        <nav class="uppl">
           <dl><!--Description list, nafn tölvupóstur og áfangi-->
             <h4>Upplýsingar:</h4>
             <dt>Nafn:</dt>
@@ -69,7 +65,7 @@
               <dd>VEFÞ1VG05AU</dd> 
           </dl>
         </nav>
-        <nav>
+        <nav class="verkefni">
           <h4>Verkefni í vefþróun 1</h4>
           <ul class="footnav"><!-- inner links -- hér þarf að aðlaga slóðir að eigin verkefnum -->
             <li><a href="verkefni1/">Verkefni 1</a></li>
@@ -82,7 +78,7 @@
             <li><a href="verkefni6/index.html">Verkefni 6</a></li>
           </ul>
         </nav>
-        <nav>
+        <nav class="tenglar">
           <h4>Gagnlegir tenglar</h4>
           <ul class="footnav"> <!-- Absolute links "target _blank" opnar nýjan glugga í vafranum !aðeins notað þegar vísað er út úr eigin vef-->
             <li> 
