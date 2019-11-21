@@ -34,10 +34,10 @@ body {
 display: grid;
 grid-gap: 0; /* bil á milli dálka - ath! bætist við heildarbreidd */
 grid-template-areas:
-"header"
-"main"
-"footer"
-"topnav";
+    "header"
+    "main"
+    "footer"
+    "topnav";
   /* skipulag dálka kemur hér */
 }
 .myndir {
@@ -48,9 +48,9 @@ main {
 display: grid; /* grid erfist aðeins til barna (child element only) */
 grid-gap: 0;
 grid-template-areas:
-      "midja"
-      "vinstri"
-      "haegri"
+    "midja"
+    "vinstri"
+    "haegri";
  /* skipulag dálka kemur hér */
 }
 
