@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    border: 3px solid;
+    margin: 0em auto;
+    padding: 0em;
+    max-width: 60em; /* = 960px x 1080px fartölvuskjár */
+}
+/*--  Grid Area --*/
+.container {
+    grid-area: container;
+}
+.haus {
+    grid-area: haus;
+    padding-left:20em;
+    font-family: 'Turret Road', cursive;
+    background-color: black;
+    color: lightslategray;
+}
+.topnav {
+    grid-area: topnav;
+}
+.content {
+    grid-area: content;
+}
+.foot {
+    grid-area: foot;
+    }
+/*-- dálkar í main --*/
+.as1 {
+    grid-area: as1;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: lightslategray;
+}
+.as2 {
+    grid-area: as2;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: lightslategray;
+}
+.art1 {
+    grid-area: art1;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: lightslategray;
+}
+/*-- Grid Template Area --*/
+.container {
+    display: grid;
+    grid-template-areas: 
+    "haus haus"
+    "content foot"
+    "content foot" 
+}
+.content {
+    display: grid; /* grid virkar á barn (child) en ekki barnabarn (grandchild) */
+    grid-gap: 0em;
+    padding: 0em ;
+    grid-template-areas: 
+    "as1 as2"
+    "art1 art1";
+    grid-template-columns: 3fr 2fr;
+}
+/*-- Top menu */
+.footmenu {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    margin: 0;
+    padding-right: 0em;
+    padding: 2em;
+    font-size: 2em;
+    font-family: 'Turret Road', cursive;
+    background-color: chartreuse;
+}
+.footmenu li {
+    list-style-type: none;
+    display: block;
+    padding: 500px 16px;
+}
+
+h1 {
+    font-style: italic;
+    font-size: 3em;
+}
+.blockquote {
+    border: solid ;
+    align-content: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-family: 'Turret Road', cursive;
+    background-color: lawngreen;
+}
+li a:hover {
+    color: blueviolet;
+}
+p {
+    font-family: 'Turret Road', cursive;
+    font-size: 2em;
+}
+.topnav {
+    border: 5px solid;
+}
+.as1,.as2,.art1 {
+    border: 3px solid;
+}
+.virkur {
+    color: blueviolet;
+}
