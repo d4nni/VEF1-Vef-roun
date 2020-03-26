@@ -1,0 +1,12 @@
+{
+    "python.pythonPath": "env\\Scripts\\python.exe",
+
+    "liveSassCompile.settings.formats":[
+        // More Complex
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "~/../../../verkefni-5/kvikun-myrecipes-output/css"
+        }
+    ]
+}
