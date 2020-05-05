@@ -1,0 +1,120 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.haus {
+    grid-area: haus;
+}
+.main {
+    grid-area: main;
+}
+.footer {
+    grid-area: footer;
+}
+body {
+    display: grid;
+    grid-template-areas: 
+    "haus"
+    "main"
+    "footer";
+    text-align: center;
+    background-image: url(http://static1.squarespace.com/static/56d725b88a65e2c48c079abf/56d727fbb4ed3b3236511b37/5da37f82ff3f1e0b3342b93e/1571068838485/ar5sr.png.jpg?format=1500w);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Ibarra Real Nova', serif;
+    max-width: 80%;
+    margin: 0em auto;
+    padding: 0em;
+    background-position: center;
+}
+.haus h1 {
+    color: rgba(95, 4, 4, 0.623);
+    font-family: 'Cinzel', serif;
+}
+
+.haus {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.main {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 1em;
+}
+
+.footer {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-bottom: 3em;
+    padding-left: 1em;
+    text-align: left;
+}
+
+.footer li {
+    list-style-type: none;
+    line-height: 2;
+}
+
+.footnav a {
+    text-decoration: none;
+    color: black;
+}
+
+.innermenu {
+    display: flex;
+    flex-flow: column;
+}
+
+.innermenu a {
+    list-style-type: none;
+    color: black;
+    text-decoration: none;
+}
+
+.topnav a:hover,
+.footnav a:hover {
+    color: grey;
+}
+
+.mynd1 {
+    width: 100%;
+    padding-bottom: 1em;
+}
+
+.col-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.innermenu a:hover {
+    background-color: rgb(150, 29, 25);
+}
+.innermenu a {
+    border-radius: 8px;
+    border: solid black;
+}
+
+.video {
+    max-width: 100%;
+}
+
+@media screen and (min-width: 60em) {
+    .mynd1 {
+        max-width: 50%;
+    }
+
+    body  {
+        margin: 0 auto;
+        padding: 0;
+        max-width: 65%;
+    }
+
+    .col-3 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .innermenu {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-evenly;
+    }
+}
