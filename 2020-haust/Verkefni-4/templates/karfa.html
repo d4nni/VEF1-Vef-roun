@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Vörulistinn Karfa{% endblock %}
+{% block content %}
+
+<div>
+{% if tom %}
+    <h1> Karfan er tóm</h1>
+{% else %}
+    <h1>Valdar vörur</h1>
+    <table>
+        <tbody>
+            <tr>
+                <th colspan="2">Smelltu á X til að eyða vöru úr körfunni</th>
+            </tr>
+            <tr>
+                <td>Vara:</td>
+                <th>Verð:</th>
+            </tr>
+            {% for i in k %}
+            <tr>
+            <td>{{ i[1] }}</td> 
+            <td><b>{{ i[3] }} ISK  <a href="/eydavoru/{{ i[0] }}"> X</a></b></td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td>Samtals verð:</td> 
+                <th>{{ samtals }} ISK</th>
+            </tr>
+            <tr>
+                <td><a href="/eyda">Tæma körfu</a></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+{% endif %}
+<a href="/" class="butt">Aftur í vörulistann</a>
+<a href="/form" class="butt">Kaupa</a>
+</div>
+{% endblock %}

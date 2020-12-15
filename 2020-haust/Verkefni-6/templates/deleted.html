@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Villa - engin aðgangur{% endblock %}
+{% block meta_url %}
+    <meta http-equiv="refresh"content="2; url={{ url_for('secret') }}">
+{% endblock %}
+{% block content %}
+
+<div>
+    <h2 class="error">Bifreið með skráningarnúmerinu {{ nr }} hefur verið eytt</h2>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+    
+        <main class="row">
+            {% for item in frjettir['frjettir'] %}
+                {% if item.id == id %}
+                    <section>
+                        <h1>{{ item.titill }}</h1>
+                        <img src="/static/mynd{{ item.id }}.jpg">
+                    </section>
+                    <section>
+                        <p>
+                            {{ item.innihald }}
+                        </p>
+                        <p>
+                            Höfundur: {{ item.hofundur }}
+                        </p>
+                        <p><a href="/b-hluti">Fréttayfirlit</a></p>
+                    </section>
+                {% endif %}
+            {% endfor %}
+        </main>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+body {
+    max-width: 50em;
+    margin: 1em auto;
+    padding: 1em;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.errormsg {
+    text-align: center;
+    color: red;
+}
+
+ul li{
+    margin: 3px;
+}
+.haus {
+    border: solid 2px;
+    text-align: center;
+}
+.fotur {
+    text-align: center;
+}
+a:link {
+    text-decoration: none;
+}

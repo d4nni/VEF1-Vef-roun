@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %} Nýskráning bifreiðar {% endblock %}
+{% block content %}
+
+<h1>Gullvagninn</h1>
+
+<div>
+    <form method="POST" action="/nyskrabil" accept-charset="UTF-8">
+        <h3>Nýskráning bifreiðar</h3>
+        <label>
+            Skráningarnúmer: <input type="text" name='nr' maxlength="6" required placeholder>
+        </label>
+        <label>
+            Tegund: <input type="text" name='tegund' required placeholder>
+        </label>
+        <label>
+            Undirtegund: <input type="text" name='utegund' required placeholder>
+        </label>
+        <label>
+            Árgerð: <input type="text" name='argerd' required placeholder>
+        </label>
+        <label>
+            Akstur: <input type="text" name='akstur' required placeholder>
+        </label>
+        <label>
+            Verð: <input type="text" name='verd' required placeholder>
+        </label>
+        <button type="submit" name="submit">Skrá bifreið í gagnagrunn</button>
+    </form>
+    <p>Ef þú ert ekki skráður í félagið þá getur þú</p>
+    <a href="/bilasala" class="butt">Bakka</a>
+</div>
+
+{% endblock %}

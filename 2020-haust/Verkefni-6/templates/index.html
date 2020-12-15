@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}Innskráning{% endblock %}
+{% block content %}
+
+<div>
+    <form method="POST" action="login" accept-charset="UTF-8">
+        <h3>Innskráning á leynisíðu</h3>
+        <label>
+            Nafn: <input type="text" name='usrname' required placeholder="Name">
+        </label>
+        <label>
+            Lykilorð: <input type="password" name='pswd' required placeholder="Password">
+        </label>
+        <input type="submit" value="Innskráning">
+    </form>
+    <p>Ef þú ert ekki skráður í félagið þá getur þú</p>
+    <a href="/register" title="nýskráning" class="butt">Skráð þig hér.</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,5 @@
+{"json": [
+        {"key1": "value1", "key1.2": "value2"}, 
+        {"key2": "value2.1", "key2.2": "value2.2"}
+    ]
+}

@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Bifreið er til{% endblock %}
+{% block meta_url %}
+    <meta http-equiv="refresh"content="2; url={{ url_for('secret') }}">
+{% endblock %}
+{% block content %}
+
+<div>
+    <h2>Skráning bifreiðarinnar {{ nr }} tókst ekki, <br> 
+    Skráningarnúmer er til í gagnagrunni
+    </h2>
+</div>
+
+
+{% endblock %}

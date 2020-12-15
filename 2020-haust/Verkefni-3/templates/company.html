@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Allar stöðvar fyrirtækis{% endblock %}
+{% block content %}
+<table>
+    <caption>Allar Bensínstöðvar fyrirtækis</caption>
+    <tr>
+        <th>Fyrirtæki</th><th>Staður</th>
+    </tr>
+
+    {% set cnt = [] %}
+    {% for item in data['results'] %}
+   <tr>
+        {% if item.company == com %}
+        {% do cnt.append(item.company) %}
+        <td>{{ item.company }}</td><td><a href="/moreinfo/{{ item.key }}">{{ item.name }}</a></td>
+        {% endif %}
+    </tr>
+    {% endfor %}
+</table>
+<p>Fjöldi stöðva: {{ cnt | length }}</p>
+<p><a href="/">Til baka</a></p>
+{% endblock %}

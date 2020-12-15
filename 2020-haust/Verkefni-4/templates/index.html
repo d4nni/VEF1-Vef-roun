@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Vörulistinn{% endblock %}
+{% block content %}
+<header class="haus">
+    {% if 'karfa' in session: %}
+        <span class="tala">{{ fjoldi }} - Vörur í körfu</span>
+    {% else %}
+        <span class="tala">(0) - Vörur í körfu</span>
+    {% endif %}
+    <a href="/karfa"><img class="karfa" src="/static/karfa.jpg"></a>
+    <small>Smelltu á körfuna til að skoða valdar vörur</small>
+</header>
+<div class="wrapper">
+    {% for i in v %}
+        <div class="vara">
+            <h2>{{ i[1] }}</h2>
+            <img src="/static/{{ i[2] }}" title="{{ i[1] }}">
+            <h2>Verð: <a href="/add/{{ i[0] }}">{{ i[3] }}</a></h2>
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}

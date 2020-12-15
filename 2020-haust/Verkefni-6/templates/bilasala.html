@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}Bílasalan Gullvagninn{% endblock %}
+{% block content %}
+
+<div>
+    <h1>Gullvagninn</h1>
+    <h4>Velkominn {{ user }}</h4>
+</div>
+<div>
+    <table>
+        <caption>Bifreiðaskrá</caption>
+        <thead>
+            <th>Númer</th>
+            <th>Tegund</th>
+            <th>Undirtegund</th>
+            <th>Árgerð</th>
+            <th>Akstur</th>
+            <th>Verð</th>
+        </thead>
+        <tbody>
+            {% for i in bilar %}
+                <tr>
+                    <td><a href="bill/{{ i[0] }}">{{ i[1]['nr'] }}</a></td>
+                    <td>{{ i[1]['tegund'] }}</td>
+                    <td>{{ i[1]['utegund'] }}</td>
+                    <td>{{ i[1]['argerd'] }}</td>
+                    <td>{{ i[1]['akstur'] }}</td>
+                    <td>{{ i[1]['verd'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+<p><a href="/nyskra" class="butt">Skrá bifreið í gagnagrunn</a></p>
+<p><a href="/logout" class="butt">Útskráning</a></p>
+
+{% endblock %}

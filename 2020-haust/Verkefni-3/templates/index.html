@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}Verkefni 3{% endblock %}
+{% block content %}
+    <h1>
+        Verð á eldsneyti á íslandi
+    </h1>
+    <div class="wrapper">
+        {% set oneCo = [] %}
+        {% for item in data['results'] %}
+            {% if item.company not in oneCo %}
+                {% do oneCo.append(item.company) %}
+                <div class="box">
+                    <a href="/company/{{ item.company }}">
+                        <img src="/static/{{ item.company }}.png" title="{{ item.company }}">
+                    </a>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="kort">
+        <h4>Ódýrasta bensínið er hjá:</h4>
+        <h2>{{ minP[1] }}: Kr: {{ minP[0] }}</h2>
+        <h4>Ódýrasta díeselolían er hjá:</h4>
+        <h2>{{ minD[1] }}: Kr: {{ minD[0] }}</h2>
+        <h4>Staðsetning: {{ minP[2] }}</h4>
+    </div>
+
+    <p> Síðast uppfært: {{ data.timestampPriceChanges | format_time }}</p>
+    
+{% endblock %}

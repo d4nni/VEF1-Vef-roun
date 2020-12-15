@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+        <main class="row">
+            <section>
+                <h1>{{ frettir[0][1] }}</h1>
+                <img src="/static/mynd0.jpg">
+            </section>
+            <section>
+                <h3>Fréttir Dagsins</h3>
+                <ul>
+                    {% for item in frettir %}
+                    <li><h3><a href="/frett/{{ item[0] }}">{{ item[1] }}</a></h3></li>
+                    {% endfor %}
+                    <li><h3><a href="/boba">óvirk síða</a></h3></li>
+                </ul>
+            </section>
+        </main>
+
+{% endblock %}

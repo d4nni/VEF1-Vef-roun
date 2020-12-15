@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}Vörulistinn Karfa{% endblock %}
+{% block content %}
+
+<div>
+    <form method="POST" action="results" accept-charset="UTF-8">
+        <h3>Viðskiptavinur</h3>
+        <label>
+            Nafn: <input type="text" name='nafn' required placeholder="Name">
+        </label>
+        <label>
+            Tölvupóstfang: <input type="email" name='email' required placeholder="E-mail">
+        </label>
+        <label>
+            Símanúmer: <input type="tel" name='simi' required placeholder="Telephone">
+        </label>
+        <input type="hidden" name='samtals' value='{{ samtals }}'>
+        <input type="submit" value="Kaupa vöru">
+    </form>
+    <a href="/karfa" class="butt">Aftur í körfu</a>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block title %}Nýskráning{% endblock %}
+{% block content %}
+
+<div>
+    <form method="POST" action="doregister" accept-charset="UTF-8">
+        <h3>Nýskráning</h3>
+        <label>
+            Nafn: <input type="text" name='usrname' required placeholder="Name">
+        </label>
+        <label>
+            Lykilorð: <input type="password" name='pswd' required placeholder="Password">
+        </label>
+        <input type="submit" value="Nýskráning">
+    </form>
+    <a href="/" title="innskráning" class="butt">Innskráning</a>
+</div>
+
+{% endblock %}

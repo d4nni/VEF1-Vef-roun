@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+    
+        <main class="row">
+            <section>
+                <h1>{{ frett[1] }}</h1>
+                <img src="/static/mynd{{ nr }}.jpg">
+            </section>
+            <section>
+                <p>
+                    {{ frett[2] }}
+                </p>
+                <p>
+                    Höfundur: {{ frett[3] }}
+                </p>
+                <p><a href="/b-hluti">Fréttayfirlit</a></p>
+            </section>
+        </main>
+
+{% endblock %}

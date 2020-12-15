@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Innskráning{% endblock %}
+{% block content %}
+
+<h1>Gullvagninn</h1>
+
+<div>
+    <form method="POST" action="/bill/breytaeyda" accept-charset="UTF-8">
+        <h3>Gullvagninn þinn</h3>
+        <input type="hidden" value="{{ id }}" name="id"> <!--aðkomulykillin að bílnum-->
+        <label>
+            Skráningarnúmer: <input type="text" name='nr' value="{{ bill[2][1] }}" maxlength="6" required placeholder>
+        </label>
+        <label>
+            Tegund: <input type="text" name='tegund' value="{{ bill[3][1] }}" required placeholder>
+        </label>
+        <label>
+            Undirtegund: <input type="text" name='utegund' value="{{ bill[4][1] }}" required placeholder>
+        </label>
+        <label>
+            Árgerð: <input type="text" name='argerd' value="{{ bill[1][1] }}" required placeholder>
+        </label>
+        <label>
+            Akstur: <input type="text" name='akstur' value="{{ bill[0][1] }}" required placeholder>
+        </label>
+        <label>
+            Verð: <input type="text" name='verd' value="{{ bill[5][1] }}" required placeholder>
+        </label>
+        {% if bill[2][1] == "tómt" %}
+            <p>Þessum bíl er ekki hægt að breyta né eyða, gagnagrunnsins vegna</p>
+        {% else %}
+            <button type="submit" name="submit" value="breyta">Breyta skráningu</button> |
+            <button type="submit" name="submit" value="eyda">Fjarlægja bíl af skrá</button>
+        {% endif %}
+    </form>
+    <a href="/bilasala" class="butt">Bakka</a>
+</div>
+
+{% endblock %}
